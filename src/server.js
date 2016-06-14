@@ -8,7 +8,7 @@ app.get('/', function(request, response) {
 });
 
 app.get('/client.js', function(request, response) {
-  response.sendFile(path.join(__dirname,'./client/index.js'));
+  response.sendFile(path.join(__dirname,'../build/client.js'));
 });
 
 app.listen(8080);
