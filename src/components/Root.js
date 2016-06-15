@@ -11,7 +11,7 @@ export class RootComponent extends Component {
     return (
         <div>
           <ButtonComponent data={this.props.data} />
-          <ButtonComponent data={this.props.data} />
+          <ButtonComponent />
         </div>
     );
   }  
