@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 
 export class ButtonComponent extends Component {
-  constructor() {
+  constructor(props) {
     super();
-    this.state = { count : 0 };
+    this.state = { count : props.count };
   }
 
   click() {
