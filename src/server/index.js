@@ -3,7 +3,7 @@ import express from 'express';
 import fs from 'fs';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import {ButtonComponent} from '../components/Button';
+import {RootComponent} from '../components/Root';
 import httpRequest from 'request';
 
 const app = express();
@@ -19,7 +19,7 @@ app.get('/', (request, response) => {
     };
 
     response.send(htmlPage
-        .replace('__REACT__', ReactDOMServer.renderToString(<ButtonComponent data={initialData}/>))
+        .replace('__REACT__', ReactDOMServer.renderToString(<RootComponent data={initialData}/>))
         .replace('__DATA__', JSON.stringify(initialData))
     );
   });
