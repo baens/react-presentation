@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/server.js",
+    "start": "node ./build/server.js",
     "build": "webpack --config webpack.server.config.js && webpack --config webpack.web.config.js && cp ./src/index.html build/"
   },
   "keywords": [],
