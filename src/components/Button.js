@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 export class ButtonComponent extends Component {
   constructor(props) {
     super();
-    this.state = { count : props.count };
+    this.state = props.data;
   }
 
   click() {

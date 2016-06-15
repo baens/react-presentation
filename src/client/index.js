@@ -3,6 +3,6 @@ import ReactDOM from 'react-dom';
 import {ButtonComponent} from '../components/Button';
 
 ReactDOM.render(
-    <ButtonComponent count={2} />,
+    <ButtonComponent data={window.data} />,
     document.getElementById('react-button')
 );
