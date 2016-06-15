@@ -1,20 +1,22 @@
-var ButtonComponent = React.createClass({
-  getInitialState: function () {
-    return {
-      count : 0
-    };
-  },
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 
-  click: function() {
-    this.setState({count: ++this.state.count});
-  },
-
-  render: function(){
-    return React.createElement('button',{onClick:this.click},'Click me '+this.state.count);
+class ButtonComponent extends Component {
+  constructor() {
+    super();
+    this.state = { count : 0 };
   }
-});
+
+  click() {
+    this.setState({count: ++this.state.count});
+  }
+
+  render() {
+    return <button onClick={this.click.bind(this)}>{'Click Me '+this.state.count}</button>;
+  }
+}
 
 ReactDOM.render(
-    React.createElement(ButtonComponent, null),
+    <ButtonComponent />,
     document.getElementById('react-button')
 );
