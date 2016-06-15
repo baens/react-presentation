@@ -9,7 +9,10 @@ export class RootComponent extends Component {
   
   render() {
     return (
-      <ButtonComponent data={this.props.data} />
+        <div>
+          <ButtonComponent data={this.props.data} />
+          <ButtonComponent data={this.props.data} />
+        </div>
     );
   }  
 }
